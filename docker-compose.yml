@@ -1,0 +1,10 @@
+version: '3'
+services:
+  nextjs:
+    build: nextjs
+  nginx:
+    image: asimmon/nextjs1-nginx:0.0.1
+    depends_on:
+      - nextjs
+    ports:
+      - "8080:8080"
